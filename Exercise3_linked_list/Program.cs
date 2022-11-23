@@ -83,6 +83,21 @@ namespace Exercise_Liked_List_A
             return true;
         }
         
-        public bool Search(int rollNo, ref Node previous, ref Node current)/*Seraches for the specified node
+        public bool Search(int rollNo, ref Node previous, ref Node current)/*Seraches for the specified node*/
+        {
+            for (previous= current = START.next; current != START; previous = current, current= current.next)
+            {
+                if (rollNo == current.rollNumber)
+                    return (true);/*returns true if the node is foud*/
+            }
+            if (rollNo == START.rollNumber)/*If the node is present at the ende*/
+                return true;
+            else
+                return false;
+        }
+        public bool listEmpty()
+        {
+
+        }
     }
 }
