@@ -108,6 +108,21 @@ namespace Exercise_Liked_List_A
             if (listEmpty())
             Console.WriteLine("\nList is Empty");
             else
+            {
+                Console.WriteLine("\nRecord in the list are;\n");
+                Node currentNode;
+                currentNode = START.next;
+                while (currentNode != START)
+                {
+                    Console.WriteLine(currentNode.rollNumber + " " + currentNode.name = "\n");
+                    currentNode = currentNode.next;
+                }
+                Console.Write(START.rollNumber + " "+ START.name + "\n");
+            }
+        }
+        public void FirstNode()
+        {
+
         }
     }
 }
