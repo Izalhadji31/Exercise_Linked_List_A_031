@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -71,7 +72,17 @@ namespace Exercise_Liked_List_A
         /*Method untuk menghapus node tertentu didalam list*/
         public bool delNode(int nim)
         {
-
+            Node previous,current;
+            previous = current = null;
+            /*Check apakah Node yang dimaksud ada dalam list atau tidak*/
+            if (Search (nim, ref previous, ref current) == false)
+                return false;
+            previous.next = current.next;
+            if (current == START)
+                START = START.next;
+            return true;
         }
+        
+        public bool Search(int rollNo, ref Node previous, ref Node current)/*Seraches for the specified node
     }
 }
