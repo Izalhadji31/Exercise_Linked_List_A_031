@@ -122,6 +122,13 @@ namespace Exercise_Liked_List_A
         }
         public void FirstNode()
         {
+            if (listEmpty())
+                Console.WriteLine("\nList is empty");
+            else
+                Console.WriteLine("\nThe First record in the list is:\n\n" + START.next.rollNumber + " " + START.next.name):
+        }
+        class Program
+        {
 
         }
     }
