@@ -97,7 +97,17 @@ namespace Exercise_Liked_List_A
         }
         public bool listEmpty()
         {
+            if (START == null)
+                return true ;
+            else
+                return false ;
+        }
 
+        public void travarse()/*Traverses all the nodes of the list*/
+        {
+            if (listEmpty())
+            Console.WriteLine("\nList is Empty");
+            else
         }
     }
 }
